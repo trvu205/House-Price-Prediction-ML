@@ -25,6 +25,7 @@ House-Price-Prediction-ML/
 ├── README.md              # Mô tả dự án
 ├── requirements.txt       # Danh sách thư viện cần cài
 └── data_description.txt   # Mô tả các thuộc tính dữ liệu
+```
 
 ## Các bước thực hiện
 1. Khảo sát dữ liệu ban đầu.
