@@ -1,77 +1,89 @@
 # House Price Prediction using Machine Learning
 
-## Giới thiệu
-Dự án này xây dựng và đánh giá các mô hình học máy cho bài toán dự đoán giá nhà dựa trên bộ dữ liệu House Prices - Advanced Regression Techniques. Dữ liệu gồm nhiều đặc trưng mô tả căn nhà như diện tích, chất lượng xây dựng, vị trí, gara, tầng hầm và các tiện ích khác.
+## Introduction
 
-## Mục tiêu dự án
-- Tiền xử lý dữ liệu bất động sản gồm cả biến số và biến phân loại.
-- Xử lý giá trị khuyết, mã hóa One-Hot Encoding và chuẩn hóa dữ liệu.
-- Áp dụng PCA và TruncatedSVD để giảm chiều dữ liệu.
-- Xây dựng và đánh giá các mô hình hồi quy dự đoán SalePrice.
-- Thực hiện phân cụm dữ liệu bằng K-Means, GMM và DBSCAN.
-- Chuyển bài toán hồi quy sang phân loại bằng cách chia SalePrice thành các khoảng giá.
-- So sánh các mô hình phân loại như KNN, Gaussian Naive Bayes và Multinomial Logistic Regression.
+This project builds and evaluates machine learning models for predicting house prices based on the House Prices - Advanced Regression Techniques dataset. The dataset contains various features describing houses, such as area, overall quality, location, garage, basement, and other amenities.
 
-## Bộ dữ liệu
-Dự án sử dụng bộ dữ liệu House Prices - Advanced Regression Techniques.  
-Biến mục tiêu là `SalePrice`, biểu diễn giá bán của căn nhà.
+## Project Objectives
 
-## Cấu trúc thư mục
+* Preprocess real estate data containing both numerical and categorical variables.
+* Handle missing values, apply One-Hot Encoding, and standardize the data.
+* Apply PCA and TruncatedSVD for dimensionality reduction.
+* Build and evaluate regression models to predict `SalePrice`.
+* Perform data clustering using K-Means, GMM, and DBSCAN.
+* Convert the regression problem into a classification problem by dividing `SalePrice` into price ranges.
+* Compare classification models such as KNN, Gaussian Naive Bayes, and Multinomial Logistic Regression.
+
+## Dataset
+
+This project uses the House Prices - Advanced Regression Techniques dataset.
+The target variable is `SalePrice`, which represents the selling price of a house.
+
+## Folder Structure
 
 ```text
 House-Price-Prediction-ML/
-├── data/                  # Dữ liệu train/test
-├── notebooks/             # Notebook thực nghiệm
-├── README.md              # Mô tả dự án
-├── requirements.txt       # Danh sách thư viện cần cài
-└── data_description.txt   # Mô tả các thuộc tính dữ liệu
+├── data/                  # Train/test data
+├── notebooks/             # Experimental notebooks
+├── README.md              # Project description
+├── requirements.txt       # List of required libraries
+└── data_description.txt   # Description of dataset features
 ```
 
-## Các bước thực hiện
-1. Khảo sát dữ liệu ban đầu.
-2. Xử lý giá trị thiếu.
-3. Mã hóa biến phân loại bằng One-Hot Encoding.
-4. Chuẩn hóa các biến số bằng StandardScaler.
-5. Giảm chiều dữ liệu bằng PCA và TruncatedSVD.
-6. Xây dựng mô hình hồi quy.
-7. Phân cụm dữ liệu.
-8. Chuyển bài toán sang phân loại.
-9. Đánh giá và so sánh kết quả.
+## Workflow
 
-## Mô hình sử dụng
-### Hồi quy
-- Linear Regression
-- KNN Regression
-- Ridge Regression
-- MLP Regression
+1. Explore the initial dataset.
+2. Handle missing values.
+3. Encode categorical variables using One-Hot Encoding.
+4. Standardize numerical variables using StandardScaler.
+5. Reduce data dimensionality using PCA and TruncatedSVD.
+6. Build regression models.
+7. Perform data clustering.
+8. Convert the problem into a classification task.
+9. Evaluate and compare the results.
 
-### Phân cụm
-- K-Means
-- Gaussian Mixture Model
-- DBSCAN
+## Models Used
 
-### Phân loại
-- KNN Classification
-- Gaussian Naive Bayes
-- Multinomial Logistic Regression
+### Regression
 
-## Kết quả nổi bật
-- PCA giúp giảm số chiều dữ liệu nhưng vẫn giữ lại phần lớn thông tin.
-- PC1 có mối tương quan mạnh với SalePrice, hỗ trợ tốt cho phân tích và trực quan hóa.
-- K-Means cho kết quả phân cụm ổn định hơn so với GMM và DBSCAN trong bài toán này.
-- Multinomial Logistic Regression đạt kết quả tốt nhất trong bài toán phân loại khoảng giá nhà.
+* Linear Regression
+* KNN Regression
+* Ridge Regression
+* MLP Regression
 
-## Công nghệ sử dụng
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+### Clustering
 
-## Cách chạy dự án
-Cài đặt các thư viện cần thiết:
+* K-Means
+* Gaussian Mixture Model
+* DBSCAN
+
+### Classification
+
+* KNN Classification
+* Gaussian Naive Bayes
+* Multinomial Logistic Regression
+
+## Key Results
+
+* PCA helps reduce the dimensionality of the data while preserving most of the important information.
+* PC1 has a strong correlation with `SalePrice`, which is useful for analysis and visualization.
+* K-Means produces more stable clustering results than GMM and DBSCAN in this project.
+* Multinomial Logistic Regression achieves the best performance in the house price range classification task.
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* Jupyter Notebook
+
+## How to Run the Project
+
+Install the required libraries:
 
 ```bash
 pip install -r requirements.txt
+```
